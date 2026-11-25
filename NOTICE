@@ -1,2 +1,3 @@
 专注力训练中心
 Windows 启动程序使用 Go 标准库及运行时，其许可保留在 platforms/windows/Go-LICENSE.txt 和 Windows 附件内。界面使用设备字体，未随包分发字体文件。
+v1.0.1 自有代码使用 GPL-3.0-only。历史发行许可见 docs/Apache-2.0-v1.0.0.txt。
