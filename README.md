@@ -14,13 +14,13 @@
 
 ## 软件下载与安装
 
-**请优先下载本地版本使用。** 打开 [Releases 下载页](https://github.com/killsiwk1/focus-training-center/releases)，选择 v1.0.1，展开 Assets（附件）。
+**请优先下载本地版本使用。** 打开 [Releases 下载页](https://github.com/killsiwk1/focus-training-center/releases)，选择 v1.0.2，展开 Assets（附件）。
 
 | 下载文件 | 适用设备 | 安装与启动 |
 | --- | --- | --- |
-| [安卓版离线 APK](https://github.com/killsiwk1/focus-training-center/releases/download/v1.0.1/focus-android-1.0.1.apk) | Android 8.0 及以上，需现代系统 WebView | 下载后用文件管理器打开 APK 安装。内置六项训练，首次打开即可离线使用。已校验签名和资源，安卓运行验收待完成。 |
-| focus-macos-1.0.1.dmg | macOS 11 及以上，Intel 和 Apple 芯片 | 双击映像，将应用拖到「应用程序」，打开后使用默认浏览器训练。从菜单栏「专注训练」退出。 |
-| focus-offline-1.0.1.zip | 已安装 Python 3.7 或更高版本的电脑 | 全部解压，在解压目录运行 `python3 start.py`（Windows 可用 `py -3 start.py`）。在浏览器打开 `http://127.0.0.1:8765/`。 |
+| [安卓版离线 APK](https://github.com/killsiwk1/focus-training-center/releases/download/v1.0.2/focus-android-1.0.2.apk) | Android 8.0 及以上，需现代系统 WebView | 下载后用文件管理器打开 APK 安装。内置六项训练，首次打开即可离线使用。已校验签名和资源，安卓运行验收待完成。 |
+| focus-macos-1.0.2.dmg | macOS 11 及以上，Intel 和 Apple 芯片 | 双击映像，将应用拖到「应用程序」，打开后使用默认浏览器训练。从菜单栏「专注训练」退出。 |
+| focus-offline-1.0.2.zip | 已安装 Python 3.7 或更高版本的电脑 | 全部解压，在解压目录运行 `python3 start.py`（Windows 可用 `py -3 start.py`）。在浏览器打开 `http://127.0.0.1:8765/`。 |
 
 Windows 专用包暂缓上架，等待 Windows 运行验证。Windows 用户可先选择通用离线包。
 
@@ -81,4 +81,4 @@ Windows 可使用 `py -3` 替换 `python3`。在同一台电脑的浏览器打�
 
 训练源码和静态资源位于 `dist/`，六项出题模块位于 `dist/games/`，原生启动程序和安卓文件桥接位于 `platforms/`。修改资源后运行 `python3 refresh_cache.py`。使用 Node.js 22 或更高版本运行 `node --test tests/rules.test.js`。浏览器回归脚本与测试范围见[功能测试报告](docs/功能测试报告.md)。
 
-自 v1.0.1 起，本项目按 [GNU GPL 第 3 版](LICENSE)（GPL-3.0-only）发布。v1.0.0 已授予的 [Apache-2.0 许可](docs/Apache-2.0-v1.0.0.txt) 继续有效。第三方声明见 [NOTICE](NOTICE)，发布范围见[安全检查报告](docs/安全检查报告.md)。
+本项目按 [GNU GPL 第 3 版](LICENSE)（GPL-3.0-only）发布。第三方声明见 [NOTICE](NOTICE)，发布范围见[安全检查报告](docs/安全检查报告.md)。
