@@ -14,7 +14,7 @@
 
 ## 软件下载与安装
 
-**请优先下载本地版本使用。** 打开 [Releases 下载页](../../releases)，选择 v1.0.0，展开 Assets（附件）。
+**请优先下载本地版本使用。** 打开 [Releases 下载页](https://github.com/killsiwk1/focus-training-center/releases)，选择 v1.0.0，展开 Assets（附件）。
 
 | 下载文件 | 适用设备 | 安装与启动 |
 | --- | --- | --- |
