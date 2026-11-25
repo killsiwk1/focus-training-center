@@ -1,0 +1,28 @@
+--- a/app.js
++++ b/app.js
+@@ -299,12 +299,7 @@
+   } else await make();
+ }
+ function download(name, data, type) {
+-  const url = URL.createObjectURL(new Blob([data], { type })),
+-    a = document.createElement("a");
+-  a.href = url;
+-  a.download = name;
+-  a.click();
+-  setTimeout(() => URL.revokeObjectURL(url), 2000);
++  AndroidFiles.save(name, data, type);
+ }
+ function csv() {
+   const head = [
+@@ -692,10 +687,7 @@
+       '<section class="panel"><h1>无法打开本机成绩库</h1><p>请允许浏览器使用本机存储，再刷新页面重试。</p><button onclick="location.reload()">重新加载</button></section>';
+   }
+   try {
+-    if (!("serviceWorker" in navigator)) throw Error();
+-    await navigator.serviceWorker.register("./sw.js");
+-    await navigator.serviceWorker.ready;
+-    offline = "离线资源已就绪。断网后可在此设备继续训练。";
++    offline = "六项训练已随安装包保存在手机上，可直接离线使用。";
+   } catch {
+     offline = "当前浏览器未能启用离线缓存，请使用安全连接打开网站后重试。";
+   }

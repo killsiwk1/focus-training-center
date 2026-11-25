@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+.env*
+*.p12
+*.jks
+*.keystore
+*.pem
+*.key
+signing/
+build/
+.openai/
+*.apk
+*.zip
+*.dmg

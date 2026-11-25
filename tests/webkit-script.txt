@@ -1,0 +1,16 @@
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const wait=async s=>{for(let i=0;i<250;i++){let el=document.querySelector(s);if(el)return el;await sleep(35)}throw Error('等待控件 '+s)};
+const click=async s=>(await wait(s)).click();
+await wait('.cards');let passed=[];
+for(const id of ['schulte','stroop','numeric','memory','cue','visual']){
+ location.hash='setup/'+id;await wait('#setup');await click('#setup [type=submit]');await wait('.arena');
+ if(id==='schulte')await click('[data-tile="1"]');
+ else if(id==='memory'){await wait('.recall');for(let i=0;i<3;i++)await click('[data-answer="0"]')}
+ else await click('[data-answer="0"]');
+ await click('[data-act=settle]');await wait('.result-score');
+ if(document.documentElement.scrollWidth>innerWidth)throw Error('横向溢出 '+id);
+ passed.push(id);
+}
+location.hash='history';await wait('.record-link');
+if(document.querySelectorAll('.record-link').length!==6)throw Error('成绩记录数量不符');
+return 'WebKit 六项训练及窄屏历史记录通过 '+passed.join(', ');
